@@ -13,23 +13,32 @@ window.addEventListener("load", function() {
 
   function chosenMovie(e){
     e.preventDefault();
-    // let form = document.querySelector("form");
+    let form = document.querySelector("form");
     let select = document.querySelector("select").value;
+    let input = document.querySelector('input[name="actors"]:checked').value;
+    console.log(input)
     addClass()
 
     document.querySelector(".movie").innerText = select;
+    document.querySelector(".anActor").innerText = input;
     document.querySelector("#message").removeAttribute("class");
+    
 
-    if(select === "Comedy"){
+    
+    if(select !== "Comedy"  && select !== "Horror" && select !== "Action" && select !== "Drama" && select !== "Crime" && input !== "actor1" ){
+      document.querySelector("#error").removeAttribute("class")
+    }else{
+    if(select === "Comedy" || input === "Robin Williams"){
       document.querySelector("#comedies").removeAttribute("class");
     }else if(select === "Horror"){
       document.querySelector("#horror").removeAttribute("class");
     }else if(select === "Action"){
       document.querySelector("#action").removeAttribute("class");
-    }else if(select === "Drama"){
+    }else if(select === "Drama" || input === "Morgan Freeman"){
       document.querySelector("#drama").removeAttribute("class");
     }else if(select === "Crime"){
       document.querySelector("#crime").removeAttribute("class");
     }
   }
+}
 })

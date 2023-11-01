@@ -11,18 +11,28 @@
   <p>Here's the list of genres. Select any one:</p>
   <form>
     <select name = "dropdown">
-      <option value = "Comedy" selected>Comedy</option>
+      <option value = "Comedy">Comedy</option>
       <option value = "Horror">Horror</option>
       <option value = "Action">Action</option>
       <option value = "Drama">Drama</option>
       <option value = "Crime">Crime</option>
     </select>
-    <button type="submit">Choose</button>
+    
+      <p>Please select your actor:</p>
+      <input type="radio" id="actor1" name="actors" value="Morgan Freeman">
+      <label for="actor1">Morgan Freeman</label><br>
+      <input type="radio" id="actor2" name="actors" value="Robin Williams">
+      <label for="actor2">Robin Williams</label><br>  
+      <input type="radio" id="actor3" name="actors" value="Keannu Reeves">
+      <label for="actor3">Keannu Reeves</label><br><br>
+      <button type="submit">Choose</button>
     </form>
 
     <div id="message" class="hidden">
-      <p>Since you chose <span class="movie"></span> movies. Here's my recommendations:</p>
+      <p>Since you chose <span class="movie"></span> movies and <span class="anActor"></span>. Here's my recommendations:</p>
     </div>
+
+    <p id="error" class="hidden">Choose one genre, please</p>
 
     <div id="movies">
       <div id="comedies" class="hidden">
@@ -65,7 +75,6 @@
           <li>The Mule</li>
         </ul>
       </div>
-
     </div>
 
 
