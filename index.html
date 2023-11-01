@@ -7,7 +7,64 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <h2>Movie Recommendation Webpage</h2>
+  <p>Here's the list of genres. Select any one:</p>
+  <form>
+    <select name = "dropdown">
+      <option value = "Comedy" selected>Comedy</option>
+      <option value = "Horror">Horror</option>
+      <option value = "Action">Action</option>
+      <option value = "Drama">Drama</option>
+      <option value = "Crime">Crime</option>
+    </select>
+
+    <div id="message" class="hidden">
+      <p id="message-input">Since you chose <span class="movie"></span> movies. Here's my recommendations:</p>
+    </div>
+
+    <div id="movies" class="hidden">
+      <div id="comedies" class="hidden">
+        <h3>Comedies</h3>
+        <ul>
+          <li>Barbie</li>
+          <li>Old Dads</li>
+          <li>Nice Girl Like You</li>
+        </ul>
+      </div>
+      <div id="horror" class="hidden">
+        <h3>Horrors</h3>
+        <ul>
+          <li>Legion</li>
+          <li>Ma</li>
+          <li>Bird box</li>
+        </ul>
+      </div>
+      <div id="action" class="hidden">
+        <h3>Actions</h3>
+        <ul>
+          <li>Spider-Man: Across the Spider-Verse</li>
+          <li>Knights of the Zodiac</li>
+          <li>Godzilla vs. Kong</li>
+        </ul>
+      </div>
+      <div id="drama" class="hidden">
+        <h3>Dramas</h3>
+        <ul>
+          <li>Downsizing</li>
+          <li>Madea's Family Reunion</li>
+          <li>Nowhere</li>
+        </ul>
+      </div>
+      <div id="crime" class="hidden">
+        <h3>Crimes</h3>
+        <ul>
+          <li>Cold Pursuit</li>
+          <li>The Transporter Refueled</li>
+          <li>The Mule</li>
+        </ul>
+      </div>
+
+    </div>
 
 
 
